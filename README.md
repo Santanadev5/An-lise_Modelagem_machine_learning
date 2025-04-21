@@ -90,4 +90,4 @@ Dataset-Spotify/
 
 Nicolas Santana  
 Orientação: Profª Thayse  
-Trabalho acadêmico - Classificação de gênero musical com aprendizado de máquina
+Trabalho acadêmico - Database Spotify Tracks DB -> https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db <-
