@@ -16,6 +16,16 @@ Este projeto oferece uma aplicação web interativa usando **Streamlit** para re
 
 ---
 
+## 📁 Dataset de Exemplo
+
+Este projeto inclui um dataset real de músicas do Spotify com diversas features como energia, dançabilidade, popularidade, entre outras.
+
+📂 Caminho: `data/SpotifyFeatures.csv`
+
+Se você não quiser subir seu próprio CSV, basta selecionar a opção **"Usar dataset do Spotify (exemplo)"** dentro da aplicação.
+
+---
+
 ## ⚙️ Requisitos
 
 - **Python 3.8 ou superior**
@@ -79,13 +89,14 @@ Abra no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```
 An-lise_Modelagem_machine_learning/
 ├── streamlit_app.py           ← Aplicação principal em Streamlit
 ├── requirements.txt           ← Dependências do projeto
-├── data/                      ← (opcional) datasets de exemplo
+├── data/                      ← Datasets de exemplo
+│   └── SpotifyFeatures.csv
 └── README.md                  ← Este arquivo
 ```
 
@@ -113,3 +124,4 @@ Este projeto é open source sob a licença MIT.
 
 ---
 
+Feito com 💙 por [@Santanadev5](https://github.com/Santanadev5)
