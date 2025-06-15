@@ -23,6 +23,7 @@ Este projeto inclui um dataset real de músicas do Spotify com diversas features
 📂 Caminho: `data/SpotifyFeatures.csv`
 
 Se você não quiser subir seu próprio CSV, basta selecionar a opção **"Usar dataset do Spotify (exemplo)"** dentro da aplicação.
+"https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db"
 
 ---
 
