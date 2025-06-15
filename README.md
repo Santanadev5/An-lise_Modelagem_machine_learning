@@ -1,93 +1,115 @@
-# PyCaret Spotify ML Pipeline 🎧
+# 🤖 ML Studio – Análise e Modelagem de Dados com Streamlit
 
-Este projeto realiza análise exploratória de dados (EDA), seleção/alteração de variáveis e teste de modelos de machine learning usando PyCaret, com base no dataset `SpotifyFeatures.csv`.
+Este projeto oferece uma aplicação web interativa usando **Streamlit** para realizar todo o pipeline de *machine learning*, desde o upload e análise dos dados até o treinamento, avaliação e previsão com modelos.
 
-## ✅ Funcionalidades atendidas
+---
 
-✔️ Análise exploratória de dados (EDA) com `ydata-profiling`  
-✔️ Seleção e tratamento de variáveis com `PyCaret`  
-✔️ Comparação automática de modelos de machine learning  
-✔️ Geração de relatório HTML interativo com gráficos e estatísticas
+## ✅ Funcionalidades
+
+- Upload de datasets CSV ou uso de dataset de exemplo (Spotify)
+- Análise exploratória com gráficos, estatísticas e correlações
+- Seleção de variáveis e tipo de tarefa (Classificação, Regressão ou Clustering)
+- Treinamento automatizado com **PyCaret**
+- Avaliação com métricas (accuracy, RMSE, R², matriz de confusão)
+- Gráficos interativos com Plotly
+- Previsões com entrada manual ou em lote via CSV
 
 ---
 
 ## ⚙️ Requisitos
 
-- Python **3.10** ou superior
-- Bibliotecas:
-  ```bash
-  pip install -r requirements.txt
-  ```
-  > Dica: certifique-se de instalar `pycaret`, `pandas`, `matplotlib`, `seaborn` e `ydata-profiling`
+- **Python 3.8 ou superior**
+
+Instale as dependências com:
+
+```bash
+pip install -r requirements.txt
+```
+
+Principais bibliotecas usadas:
+- `streamlit`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `plotly`
+- `pycaret`
+- `scikit-learn`
 
 ---
 
 ## 🚀 Como rodar o projeto
 
-1. Clone o repositório e entre na pasta do projeto:
-   ```bash
-   git clone https://github.com/Santanadev5/Dataset-Spotify.git
-   cd Dataset-Spotify
-   ```
+1. Clone o repositório:
 
-2. Para **gerar a análise exploratória em HTML**:
-   ```bash
-   python main.py profile SpotifyFeatures.csv
-   ```
-   Isso irá gerar um arquivo chamado `profile_report.html` na raiz do projeto.
+```bash
+git clone https://github.com/Santanadev5/An-lise_Modelagem_machine_learning.git
+cd An-lise_Modelagem_machine_learning
+```
 
-3. Para **treinar o modelo com PyCaret (classificação)**:
-   ```bash
-   python main.py train SpotifyFeatures.csv genre classification
-   ```
-   O melhor modelo será selecionado automaticamente com `compare_models()`.
+2. Instale os requisitos:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Execute a aplicação Streamlit:
+
+```bash
+python -m streamlit run streamlit_app.py
+```
+
+Abra no navegador: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 🌐 Como abrir o relatório HTML
+## 🧪 Como usar a aplicação
 
-Após gerar o `profile_report.html`, você pode abrir de 2 formas:
+1. Use o menu lateral da aplicação para navegar entre:
+   - 📊 **Upload e Análise de Dados**
+   - 🔍 **Análise Exploratória**
+   - ⚙️ **Configuração do Modelo**
+   - 🎯 **Treinamento e Avaliação**
+   - 🔮 **Previsões**
 
-### ➤ Manualmente:
-1. Vá até a pasta do projeto pelo Explorador de Arquivos
-2. Clique duas vezes no arquivo `profile_report.html`
-
-### ➤ Via terminal PowerShell:
-```bash
-start msedge "$PWD\profile_report.html"
-```
-> Ou substitua `msedge` por `chrome` se quiser abrir com o Google Chrome
-
-### ➤ Via Python:
-```python
-import webbrowser
-webbrowser.open("profile_report.html")
-```
-Execute isso após entrar no modo `python` no terminal.
+2. Carregue seu dataset ou use o dataset do Spotify
+3. Escolha as variáveis e o tipo de tarefa
+4. Treine e avalie seu modelo
+5. Faça previsões com novos dados
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```
-Dataset-Spotify/
-├── application/
-│   ├── data/SpotifyFeatures.csv   ← Base de dados
-│   └── use_cases.py               ← Lógica dos comandos
-├── adapters/
-│   └── pycaret_adapter.py         ← Treinamento com PyCaret
-├── ports/
-│   └── training_port.py           ← Interface de treino
-├── profile_report.html            ← Relatório EDA gerado
-├── correlation_matrix.png         ← Gráfico de correlação
-├── main.py                        ← CLI principal
-└── README.md                      ← Este arquivo
+An-lise_Modelagem_machine_learning/
+├── streamlit_app.py           ← Aplicação principal em Streamlit
+├── requirements.txt           ← Dependências do projeto
+├── data/                      ← (opcional) datasets de exemplo
+└── README.md                  ← Este arquivo
 ```
 
 ---
 
-## ✍️ Autor
+## 🧠 Modelos utilizados com PyCaret
 
-Nicolas Santana  
-Orientação: Profª Thayse  
-Trabalho acadêmico - Database Spotify Tracks DB -> https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db <-
+- Classificação: `RandomForest`, `XGBoost`, `LogisticRegression`, etc.
+- Regressão: `LinearRegression`, `GradientBoosting`, `XGBoost`, etc.
+- Clustering: `KMeans` (com visualização 2D automática)
+
+---
+
+## 📦 Exportação de Resultados
+
+- Baixe arquivos de previsão em CSV
+- Visualize métricas e gráficos diretamente na interface
+- Suporte a entrada manual e em lote
+
+---
+
+## 📄 Licença
+
+Este projeto é open source sob a licença MIT.
+
+---
+
