@@ -36,15 +36,18 @@ Instale as dependências com:
 pip install -r requirements.txt
 ```
 
-Principais bibliotecas usadas:
-- `streamlit`
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `plotly`
-- `pycaret`
-- `scikit-learn`
+Conteúdo do `requirements.txt`:
+
+```
+streamlit
+pandas
+pycaret
+matplotlib
+seaborn
+ydata-profiling
+dtale
+kaggle
+```
 
 ---
 
@@ -124,4 +127,3 @@ Este projeto é open source sob a licença MIT.
 
 ---
 
-Feito com 💙 por [@Santanadev5](https://github.com/Santanadev5)
